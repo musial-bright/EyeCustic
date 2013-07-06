@@ -8,9 +8,11 @@
 
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "ToneGenerator.h"
 
 @interface ViewController ()
 @property UIView *testView;
+@property (nonatomic, strong) ToneGenerator *toneGenerator;
 @end
 
 @implementation ViewController
@@ -24,10 +26,16 @@
 - (IBAction)scan:(id)sender {
     UIImage *captureImage = captureManager.image;
     imageView.image = [UIImage imageWithCGImage:captureImage.CGImage scale:0 orientation:UIImageOrientationRight];
+    [self.toneGenerator play:2000];
 }
 
 - (void)captureImage {
     [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(scan:) userInfo:nil repeats:YES];
+}
+
+- (ToneGenerator *)toneGenerator {
+    if (!_toneGenerator) _toneGenerator = [[ToneGenerator alloc] init];
+    return _toneGenerator;
 }
 
 - (void)viewDidLoad

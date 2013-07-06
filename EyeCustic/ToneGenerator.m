@@ -125,7 +125,7 @@ void ToneInterruptionListener(void *inClientData, UInt32 inInterruptionState)
 	NSAssert1(err == noErr, @"Error setting stream format: %hd", err);
 }
 
-- (void)play {
+- (void)play:(float)currentFrequency {
     if (toneUnit)
 	{
 		AudioOutputUnitStop(toneUnit);
@@ -135,6 +135,7 @@ void ToneInterruptionListener(void *inClientData, UInt32 inInterruptionState)
 	}
 	else
 	{
+        frequency = currentFrequency;
 		[self createToneUnit];
 		
 		// Stop changing parameters on the unit
@@ -151,7 +152,7 @@ void ToneInterruptionListener(void *inClientData, UInt32 inInterruptionState)
 {
 	if (toneUnit)
 	{
-		[self play];
+		[self play:0];
 	}
 }
 

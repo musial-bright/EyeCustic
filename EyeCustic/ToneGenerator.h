@@ -20,7 +20,7 @@
     double theta;
 }
 
-- (void)play;
+- (void)play:(float)currentFrequency;
 - (void)stop;
 
 @end
