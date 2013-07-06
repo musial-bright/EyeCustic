@@ -9,10 +9,12 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "ToneGenerator.h"
+#import "ImageAnalyser.h"
 
 @interface ViewController ()
 @property UIView *testView;
 @property (nonatomic, strong) ToneGenerator *toneGenerator;
+@property (nonatomic, strong) ImageAnalyser *imageAnalyser;
 @end
 
 @implementation ViewController
@@ -26,7 +28,12 @@
 - (IBAction)scan:(id)sender {
     UIImage *captureImage = captureManager.image;
     imageView.image = [UIImage imageWithCGImage:captureImage.CGImage scale:0 orientation:UIImageOrientationRight];
-    [self.toneGenerator play:2000];
+    
+    NSArray *imageValue = [self.imageAnalyser pixelValueFor:captureImage AtXLocation:160 andYLocation:240];
+    
+    float alphaValue = [imageValue[3] floatValue];
+    
+    [self.toneGenerator play:alphaValue*1000];
 }
 
 - (void)captureImage {
@@ -36,6 +43,11 @@
 - (ToneGenerator *)toneGenerator {
     if (!_toneGenerator) _toneGenerator = [[ToneGenerator alloc] init];
     return _toneGenerator;
+}
+
+- (ImageAnalyser *)imageAnalyser {
+    if (!_imageAnalyser) _imageAnalyser = [[ImageAnalyser alloc] init];
+    return _imageAnalyser;
 }
 
 - (void)viewDidLoad

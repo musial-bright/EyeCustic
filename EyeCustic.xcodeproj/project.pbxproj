@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		50182A43178851D300B1CC30 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50182A42178851D300B1CC30 /* AudioToolbox.framework */; };
+		50182A4B17887E6200B1CC30 /* ImageAnalyser.m in Sources */ = {isa = PBXBuildFile; fileRef = 50182A4A17887E6200B1CC30 /* ImageAnalyser.m */; };
 		9AE8D7AD178812BD00264E79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8D7AC178812BD00264E79 /* UIKit.framework */; };
 		9AE8D7AF178812BD00264E79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8D7AE178812BD00264E79 /* Foundation.framework */; };
 		9AE8D7B1178812BD00264E79 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8D7B0178812BD00264E79 /* CoreGraphics.framework */; };
@@ -29,6 +30,8 @@
 /* Begin PBXFileReference section */
 		50182A42178851D300B1CC30 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		50182A44178851DC00B1CC30 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		50182A4917887E6200B1CC30 /* ImageAnalyser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAnalyser.h; sourceTree = "<group>"; };
+		50182A4A17887E6200B1CC30 /* ImageAnalyser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAnalyser.m; sourceTree = "<group>"; };
 		9AE8D7A9178812BD00264E79 /* EyeCustic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeCustic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE8D7AC178812BD00264E79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9AE8D7AE178812BD00264E79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,8 @@
 				9AE8D7D417881BC700264E79 /* CaptureSessionManager.m */,
 				9AE8D7DA17886AB400264E79 /* ToneGenerator.h */,
 				9AE8D7DB17886AB400264E79 /* ToneGenerator.m */,
+				50182A4917887E6200B1CC30 /* ImageAnalyser.h */,
+				50182A4A17887E6200B1CC30 /* ImageAnalyser.m */,
 			);
 			path = EyeCustic;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				9AE8D7C9178812BD00264E79 /* ViewController.m in Sources */,
 				9AE8D7D517881BC700264E79 /* CaptureSessionManager.m in Sources */,
 				9AE8D7DC17886AB400264E79 /* ToneGenerator.m in Sources */,
+				50182A4B17887E6200B1CC30 /* ImageAnalyser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
