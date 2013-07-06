@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "CaptureSessionManager.h"
 
-@interface ViewController : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
+@interface ViewController : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate> {
 
+    IBOutlet UIView *captureView;
+    IBOutlet UIImageView *imageView;
+    
+}
 @property (retain) CaptureSessionManager *captureManager;
-
-@property (nonatomic, strong) UIImageView *imageView;
 
 @end
