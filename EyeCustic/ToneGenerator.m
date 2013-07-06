@@ -1,19 +1,12 @@
 //
-//  ToneGeneratorViewController.m
-//  ToneGenerator
+//  ToneGenerator.m
+//  EyeCustic
 //
-//  Created by Matt Gallagher on 2010/10/20.
-//  Copyright 2010 Matt Gallagher. All rights reserved.
-//
-//  Permission is given to use this source code file, free of charge, in any
-//  project, commercial or otherwise, entirely at your risk, with the condition
-//  that any redistribution (in part or whole) of source code must retain
-//  this copyright and permission notice. Attribution in compiled projects is
-//  appreciated but not required.
+//  Created by Adam Musial-Bright on 7/6/13.
+//  Copyright (c) 2013 iOS Meetup. All rights reserved.
 //
 
-#import "ToneGeneratorViewController.h"
-#import <AudioToolbox/AudioToolbox.h>
+#import "ToneGenerator.h"
 
 OSStatus RenderTone(
                     void *inRefCon,
@@ -28,10 +21,9 @@ OSStatus RenderTone(
 	const double amplitude = 0.25;
     
 	// Get the tone parameters out of the view controller
-	ToneGeneratorViewController *viewController =
-    (__bridge ToneGeneratorViewController *)inRefCon;
-	double theta = viewController->theta;
-	double theta_increment = 2.0 * M_PI * viewController->frequency / viewController->sampleRate;
+	ToneGenerator *toneGenerator = (__bridge ToneGenerator *)inRefCon;
+	double theta = toneGenerator->theta;
+	double theta_increment = 2.0 * M_PI * toneGenerator->frequency / toneGenerator->sampleRate;
     
 	// This is a mono tone generator so we only need the first buffer
 	const int channel = 0;
@@ -50,29 +42,33 @@ OSStatus RenderTone(
 	}
 	
 	// Store the theta back in the view controller
-	viewController->theta = theta;
+	toneGenerator->theta = theta;
     
 	return noErr;
 }
 
 void ToneInterruptionListener(void *inClientData, UInt32 inInterruptionState)
 {
-	ToneGeneratorViewController *viewController =
-    (__bridge ToneGeneratorViewController *)inClientData;
-	
-	[viewController stop];
+	ToneGenerator *toneGenerator = (__bridge ToneGenerator *)inClientData;
+	[toneGenerator stop];
 }
 
-@implementation ToneGeneratorViewController
+@implementation ToneGenerator
 
-@synthesize frequencySlider;
-@synthesize playButton;
-@synthesize frequencyLabel;
-
-- (IBAction)sliderChanged:(UISlider *)slider
-{
-	frequency = slider.value;
-	frequencyLabel.text = [NSString stringWithFormat:@"%4.1f Hz", frequency];
+- (id)init {
+    self = [super init];
+    if (self) {
+        sampleRate = 44100;
+        
+        OSStatus result = AudioSessionInitialize(NULL, NULL, ToneInterruptionListener, (__bridge void *)(self));
+        if (result == kAudioSessionNoError)
+        {
+            UInt32 sessionCategory = kAudioSessionCategory_MediaPlayback;
+            AudioSessionSetProperty(kAudioSessionProperty_AudioCategory, sizeof(sessionCategory), &sessionCategory);
+        }
+        AudioSessionSetActive(true);
+    }
+    return self;
 }
 
 - (void)createToneUnit
@@ -129,16 +125,13 @@ void ToneInterruptionListener(void *inClientData, UInt32 inInterruptionState)
 	NSAssert1(err == noErr, @"Error setting stream format: %hd", err);
 }
 
-- (IBAction)togglePlay:(UIButton *)selectedButton
-{
-	if (toneUnit)
+- (void)play {
+    if (toneUnit)
 	{
 		AudioOutputUnitStop(toneUnit);
 		AudioUnitUninitialize(toneUnit);
 		AudioComponentInstanceDispose(toneUnit);
 		toneUnit = nil;
-		
-		[selectedButton setTitle:NSLocalizedString(@"Play", nil) forState:0];
 	}
 	else
 	{
@@ -151,8 +144,6 @@ void ToneInterruptionListener(void *inClientData, UInt32 inInterruptionState)
 		// Start playback
 		err = AudioOutputUnitStart(toneUnit);
 		NSAssert1(err == noErr, @"Error starting unit: %hd", err);
-		
-		[selectedButton setTitle:NSLocalizedString(@"Stop", nil) forState:0];
 	}
 }
 
@@ -160,31 +151,8 @@ void ToneInterruptionListener(void *inClientData, UInt32 inInterruptionState)
 {
 	if (toneUnit)
 	{
-		[self togglePlay:playButton];
+		[self play];
 	}
-}
-
-- (void)viewDidLoad {
-	[super viewDidLoad];
-    
-	[self sliderChanged:frequencySlider];
-	sampleRate = 44100;
-    
-	OSStatus result = AudioSessionInitialize(NULL, NULL, ToneInterruptionListener, (__bridge void *)(self));
-	if (result == kAudioSessionNoError)
-	{
-		UInt32 sessionCategory = kAudioSessionCategory_MediaPlayback;
-		AudioSessionSetProperty(kAudioSessionProperty_AudioCategory, sizeof(sessionCategory), &sessionCategory);
-	}
-	AudioSessionSetActive(true);
-}
-
-- (void)viewDidUnload {
-	self.frequencyLabel = nil;
-	self.playButton = nil;
-	self.frequencySlider = nil;
-    
-	AudioSessionSetActive(false);
 }
 
 @end

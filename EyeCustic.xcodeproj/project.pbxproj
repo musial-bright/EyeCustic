@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		50182A43178851D300B1CC30 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50182A42178851D300B1CC30 /* AudioToolbox.framework */; };
-		50182A45178851DC00B1CC30 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50182A44178851DC00B1CC30 /* AudioUnit.framework */; };
-		50182A48178863B200B1CC30 /* ToneGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50182A47178863B200B1CC30 /* ToneGeneratorViewController.m */; };
 		9AE8D7AD178812BD00264E79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8D7AC178812BD00264E79 /* UIKit.framework */; };
 		9AE8D7AF178812BD00264E79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8D7AE178812BD00264E79 /* Foundation.framework */; };
 		9AE8D7B1178812BD00264E79 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8D7B0178812BD00264E79 /* CoreGraphics.framework */; };
@@ -25,13 +23,12 @@
 		9AE8D7D2178819CB00264E79 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8D7D1178819CB00264E79 /* AVFoundation.framework */; };
 		9AE8D7D517881BC700264E79 /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D7D417881BC700264E79 /* CaptureSessionManager.m */; };
 		9AE8D7D7178842F500264E79 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8D7D6178842F500264E79 /* CoreVideo.framework */; };
+		9AE8D7DC17886AB400264E79 /* ToneGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D7DB17886AB400264E79 /* ToneGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		50182A42178851D300B1CC30 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		50182A44178851DC00B1CC30 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
-		50182A46178863B200B1CC30 /* ToneGeneratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToneGeneratorViewController.h; sourceTree = "<group>"; };
-		50182A47178863B200B1CC30 /* ToneGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToneGeneratorViewController.m; sourceTree = "<group>"; };
 		9AE8D7A9178812BD00264E79 /* EyeCustic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeCustic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE8D7AC178812BD00264E79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9AE8D7AE178812BD00264E79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +50,8 @@
 		9AE8D7D317881BC700264E79 /* CaptureSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureSessionManager.h; sourceTree = "<group>"; };
 		9AE8D7D417881BC700264E79 /* CaptureSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureSessionManager.m; sourceTree = "<group>"; };
 		9AE8D7D6178842F500264E79 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		9AE8D7DA17886AB400264E79 /* ToneGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToneGenerator.h; sourceTree = "<group>"; };
+		9AE8D7DB17886AB400264E79 /* ToneGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToneGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +59,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50182A45178851DC00B1CC30 /* AudioUnit.framework in Frameworks */,
 				50182A43178851D300B1CC30 /* AudioToolbox.framework in Frameworks */,
 				9AE8D7D7178842F500264E79 /* CoreVideo.framework in Frameworks */,
 				9AE8D7D2178819CB00264E79 /* AVFoundation.framework in Frameworks */,
@@ -117,8 +115,8 @@
 				9AE8D7B3178812BD00264E79 /* Supporting Files */,
 				9AE8D7D317881BC700264E79 /* CaptureSessionManager.h */,
 				9AE8D7D417881BC700264E79 /* CaptureSessionManager.m */,
-				50182A46178863B200B1CC30 /* ToneGeneratorViewController.h */,
-				50182A47178863B200B1CC30 /* ToneGeneratorViewController.m */,
+				9AE8D7DA17886AB400264E79 /* ToneGenerator.h */,
+				9AE8D7DB17886AB400264E79 /* ToneGenerator.m */,
 			);
 			path = EyeCustic;
 			sourceTree = "<group>";
@@ -207,7 +205,7 @@
 				9AE8D7BD178812BD00264E79 /* AppDelegate.m in Sources */,
 				9AE8D7C9178812BD00264E79 /* ViewController.m in Sources */,
 				9AE8D7D517881BC700264E79 /* CaptureSessionManager.m in Sources */,
-				50182A48178863B200B1CC30 /* ToneGeneratorViewController.m in Sources */,
+				9AE8D7DC17886AB400264E79 /* ToneGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
