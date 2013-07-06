@@ -22,7 +22,8 @@
 	[label setHidden:YES];
 }
 - (IBAction)scan:(id)sender {
-    imageView.image = captureManager.image;
+    UIImage *captureImage = captureManager.image;
+    imageView.image = [UIImage imageWithCGImage:captureImage.CGImage scale:0 orientation:UIImageOrientationRight];
 }
 
 - (void)captureImage {

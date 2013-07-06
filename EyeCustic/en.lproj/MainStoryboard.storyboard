@@ -32,7 +32,7 @@
                                     <action selector="scan:" destination="2" eventType="touchUpInside" id="AXj-n5-DOr"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="KYM-Gy-aMz">
+                            <imageView userInteractionEnabled="NO" alpha="0.50000000000000011" contentMode="scaleToFill" id="KYM-Gy-aMz">
                                 <rect key="frame" x="0.0" y="0.0" width="102" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
