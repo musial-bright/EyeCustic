@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9AE8D7AD178812BD00264E79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8D7AC178812BD00264E79 /* UIKit.framework */; };
+		9AE8D7AF178812BD00264E79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8D7AE178812BD00264E79 /* Foundation.framework */; };
+		9AE8D7B1178812BD00264E79 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8D7B0178812BD00264E79 /* CoreGraphics.framework */; };
+		9AE8D7B7178812BD00264E79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE8D7B5178812BD00264E79 /* InfoPlist.strings */; };
+		9AE8D7B9178812BD00264E79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D7B8178812BD00264E79 /* main.m */; };
+		9AE8D7BD178812BD00264E79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D7BC178812BD00264E79 /* AppDelegate.m */; };
+		9AE8D7BF178812BD00264E79 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AE8D7BE178812BD00264E79 /* Default.png */; };
+		9AE8D7C1178812BD00264E79 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AE8D7C0178812BD00264E79 /* Default@2x.png */; };
+		9AE8D7C3178812BD00264E79 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AE8D7C2178812BD00264E79 /* Default-568h@2x.png */; };
+		9AE8D7C6178812BD00264E79 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE8D7C4178812BD00264E79 /* MainStoryboard.storyboard */; };
+		9AE8D7C9178812BD00264E79 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D7C8178812BD00264E79 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9AE8D7A9178812BD00264E79 /* EyeCustic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeCustic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE8D7AC178812BD00264E79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9AE8D7AE178812BD00264E79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9AE8D7B0178812BD00264E79 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9AE8D7B4178812BD00264E79 /* EyeCustic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EyeCustic-Info.plist"; sourceTree = "<group>"; };
+		9AE8D7B6178812BD00264E79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9AE8D7B8178812BD00264E79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9AE8D7BA178812BD00264E79 /* EyeCustic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EyeCustic-Prefix.pch"; sourceTree = "<group>"; };
+		9AE8D7BB178812BD00264E79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9AE8D7BC178812BD00264E79 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9AE8D7BE178812BD00264E79 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9AE8D7C0178812BD00264E79 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9AE8D7C2178812BD00264E79 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9AE8D7C5178812BD00264E79 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9AE8D7C7178812BD00264E79 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9AE8D7C8178812BD00264E79 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9AE8D7A6178812BD00264E79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AE8D7AD178812BD00264E79 /* UIKit.framework in Frameworks */,
+				9AE8D7AF178812BD00264E79 /* Foundation.framework in Frameworks */,
+				9AE8D7B1178812BD00264E79 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9AE8D7A0178812BD00264E79 = {
+			isa = PBXGroup;
+			children = (
+				9AE8D7B2178812BD00264E79 /* EyeCustic */,
+				9AE8D7AB178812BD00264E79 /* Frameworks */,
+				9AE8D7AA178812BD00264E79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9AE8D7AA178812BD00264E79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AE8D7A9178812BD00264E79 /* EyeCustic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AE8D7AB178812BD00264E79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AE8D7AC178812BD00264E79 /* UIKit.framework */,
+				9AE8D7AE178812BD00264E79 /* Foundation.framework */,
+				9AE8D7B0178812BD00264E79 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AE8D7B2178812BD00264E79 /* EyeCustic */ = {
+			isa = PBXGroup;
+			children = (
+				9AE8D7BB178812BD00264E79 /* AppDelegate.h */,
+				9AE8D7BC178812BD00264E79 /* AppDelegate.m */,
+				9AE8D7C4178812BD00264E79 /* MainStoryboard.storyboard */,
+				9AE8D7C7178812BD00264E79 /* ViewController.h */,
+				9AE8D7C8178812BD00264E79 /* ViewController.m */,
+				9AE8D7B3178812BD00264E79 /* Supporting Files */,
+			);
+			path = EyeCustic;
+			sourceTree = "<group>";
+		};
+		9AE8D7B3178812BD00264E79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9AE8D7B4178812BD00264E79 /* EyeCustic-Info.plist */,
+				9AE8D7B5178812BD00264E79 /* InfoPlist.strings */,
+				9AE8D7B8178812BD00264E79 /* main.m */,
+				9AE8D7BA178812BD00264E79 /* EyeCustic-Prefix.pch */,
+				9AE8D7BE178812BD00264E79 /* Default.png */,
+				9AE8D7C0178812BD00264E79 /* Default@2x.png */,
+				9AE8D7C2178812BD00264E79 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9AE8D7A8178812BD00264E79 /* EyeCustic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AE8D7CC178812BD00264E79 /* Build configuration list for PBXNativeTarget "EyeCustic" */;
+			buildPhases = (
+				9AE8D7A5178812BD00264E79 /* Sources */,
+				9AE8D7A6178812BD00264E79 /* Frameworks */,
+				9AE8D7A7178812BD00264E79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EyeCustic;
+			productName = EyeCustic;
+			productReference = 9AE8D7A9178812BD00264E79 /* EyeCustic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9AE8D7A1178812BD00264E79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "iOS Meetup";
+			};
+			buildConfigurationList = 9AE8D7A4178812BD00264E79 /* Build configuration list for PBXProject "EyeCustic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9AE8D7A0178812BD00264E79;
+			productRefGroup = 9AE8D7AA178812BD00264E79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9AE8D7A8178812BD00264E79 /* EyeCustic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9AE8D7A7178812BD00264E79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AE8D7B7178812BD00264E79 /* InfoPlist.strings in Resources */,
+				9AE8D7BF178812BD00264E79 /* Default.png in Resources */,
+				9AE8D7C1178812BD00264E79 /* Default@2x.png in Resources */,
+				9AE8D7C3178812BD00264E79 /* Default-568h@2x.png in Resources */,
+				9AE8D7C6178812BD00264E79 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9AE8D7A5178812BD00264E79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AE8D7B9178812BD00264E79 /* main.m in Sources */,
+				9AE8D7BD178812BD00264E79 /* AppDelegate.m in Sources */,
+				9AE8D7C9178812BD00264E79 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9AE8D7B5178812BD00264E79 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AE8D7B6178812BD00264E79 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9AE8D7C4178812BD00264E79 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AE8D7C5178812BD00264E79 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9AE8D7CA178812BD00264E79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9AE8D7CB178812BD00264E79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9AE8D7CD178812BD00264E79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EyeCustic/EyeCustic-Prefix.pch";
+				INFOPLIST_FILE = "EyeCustic/EyeCustic-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9AE8D7CE178812BD00264E79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EyeCustic/EyeCustic-Prefix.pch";
+				INFOPLIST_FILE = "EyeCustic/EyeCustic-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9AE8D7A4178812BD00264E79 /* Build configuration list for PBXProject "EyeCustic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AE8D7CA178812BD00264E79 /* Debug */,
+				9AE8D7CB178812BD00264E79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AE8D7CC178812BD00264E79 /* Build configuration list for PBXNativeTarget "EyeCustic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AE8D7CD178812BD00264E79 /* Debug */,
+				9AE8D7CE178812BD00264E79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9AE8D7A1178812BD00264E79 /* Project object */;
+}
