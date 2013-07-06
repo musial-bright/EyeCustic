@@ -45,7 +45,7 @@
                 //dispatch_release(queue);
                 
                 videoOut.videoSettings = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey];
-                videoOut.minFrameDuration = CMTimeMake(1, 15);
+                //videoOut.minFrameDuration = CMTimeMake(1, 15);
                 
 			} else {
 				NSLog(@"Couldn't add video input");

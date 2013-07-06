@@ -22,10 +22,7 @@
 	[label setHidden:YES];
 }
 - (IBAction)scan:(id)sender {
-    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 150)];
-    self.imageView.image = captureManager.image;
-    [self.view addSubview:self.imageView];
-    NSLog(@"scan");
+    imageView.image = captureManager.image;
 }
 
 - (void)captureImage {
@@ -42,11 +39,11 @@
 	[[self captureManager] addVideoInput];
     
 	[[self captureManager] addVideoPreviewLayer];
-	CGRect layerRect = [self.view.layer bounds];
+	CGRect layerRect = [captureView.layer bounds];
 	[[self.captureManager previewLayer] setBounds:layerRect];
 	[[self.captureManager previewLayer] setPosition:CGPointMake(CGRectGetMidX(layerRect),  CGRectGetMidY(layerRect))];
-	[self.view.layer addSublayer:[[self captureManager] previewLayer]];
-    
+	[captureView.layer addSublayer:[[self captureManager] previewLayer]];
+
 	[[captureManager captureSession] startRunning];
     
     [self captureImage];
