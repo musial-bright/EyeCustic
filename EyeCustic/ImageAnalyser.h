@@ -10,8 +10,6 @@
 
 @interface ImageAnalyser : NSObject
 
-- (int)areaValueFor: (UIImage *)image topLeftPoint:(CGPoint)tlPoint andBottomRightPoint:(CGPoint)brPoint;
-
-- (NSArray*)pixelValueFor: (UIImage *)image AtXLocation: (int) x andYLocation:(int) y;
+-(int)imageInfoFromImagePart:(UIImage *)image inRect:(CGRect)rect;
 
 @end

@@ -10,44 +10,63 @@
 
 @implementation ImageAnalyser
 
-- (NSArray*)pixelValueFor: (UIImage *)image AtXLocation: (int) x andYLocation:(int) y {
+-(int)imageInfoFromImagePart:(UIImage *)image inRect:(CGRect)rect{
+    
     CFDataRef pixelData = CGDataProviderCopyData(CGImageGetDataProvider(image.CGImage));
+    
     const UInt8* data = CFDataGetBytePtr(pixelData);
     
-    int pixelInfo = ((image.size.width  * y) + x ) * 4; // The image is png
+    int alphaSum = 0;
     
-    UInt8 red = data[pixelInfo];         // If you need this info, enable it
-    UInt8 green = data[(pixelInfo + 1)]; // If you need this info, enable it
-    UInt8 blue = data[pixelInfo + 2];    // If you need this info, enable it
-    UInt8 alpha = data[pixelInfo + 3];     // I need only this info for my maze game
+    NSMutableArray *intCarrierSource = [[NSMutableArray alloc] init];
     
-    //UIColor* color = [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:alpha/255.0f]; // The pixel color info
+    for(int i = rect.origin.y * image.size.width;i <= (rect.origin.y + rect.size.height) * image.size.width;i++){
+        
+        [intCarrierSource addObject:@(i)];
+        
+    };
     
-    NSArray *pixelInts = [[NSArray alloc] initWithObjects:@(red),@(green),@(blue),@(alpha), nil];
     
     
-    if (alpha) return pixelInts;
-    else return 0;
+    NSMutableArray *targetPixels = [[NSMutableArray alloc] init];
     
-}
-
-
-
-- (int)areaValueFor: (UIImage *)image topLeftPoint:(CGPoint)tlPoint andBottomRightPoint:(CGPoint)brPoint
-{
-    int alpha = 0;
-    int scalFactor = 10;
-    int loopCount = 0;
-    for (int yScan = tlPoint.y; yScan <= brPoint.y; yScan = yScan + scalFactor) {
-        for (int xScan = tlPoint.x; xScan <= brPoint.x; xScan =  xScan + scalFactor) {
-            NSArray *pixelInfo = [self pixelValueFor:image AtXLocation:xScan andYLocation:yScan];
-            alpha += [pixelInfo[3] integerValue];
-            loopCount++;
-        }
+    
+    
+    for (int i=0; i<rect.size.height; i++) {
+        
+        NSRange tmpRange = NSMakeRange(i*image.size.width + rect.origin.x , rect.size.width);
+        
+        NSLog(@"range %i: %@",i,NSStringFromRange(tmpRange));
+        
+        NSArray *tmpArray = [intCarrierSource subarrayWithRange:tmpRange];
+        
+        [targetPixels addObjectsFromArray:tmpArray];
+        
     }
-    //int pixelCount = (brPoint.x - tlPoint.x) * (brPoint.y - tlPoint.y);
-    return alpha/loopCount;
+    
+    
+    
+    NSLog(@"NSARRAY: %@",targetPixels);
+    
+    for (NSNumber* pixel in targetPixels) {
+        
+         //NSLog(@"alpha: %i",data[([pixel intValue] *4 + 3)]);
+        
+        alphaSum += data[([pixel intValue] *4 + 2)];
+        
+    }
+    
+    
+    
+    int averageAlpha = alphaSum/[targetPixels count];
+    
+    
+    
+    return averageAlpha;
+    
 }
+
+
 
 
 @end

@@ -29,10 +29,8 @@
     UIImage *captureImage = captureManager.image;
     imageView.image = [UIImage imageWithCGImage:captureImage.CGImage scale:0 orientation:UIImageOrientationRight];
     
-    NSArray *imageValue = [self.imageAnalyser pixelValueFor:captureImage AtXLocation:160 andYLocation:240];
-    
-    float alphaValue = [imageValue[3] floatValue];
-    float frequency = alphaValue * 1000;
+  
+    float frequency = [self.imageAnalyser imageInfoFromImagePart:captureImage inRect:CGRectMake(110, 200, 100, 100)] * 200;
     [self.toneGenerator play:frequency];
     frequencyLabel.text = [NSString stringWithFormat:@"%f", frequency];
 }
