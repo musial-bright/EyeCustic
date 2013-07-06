@@ -11,6 +11,7 @@
 
 @interface ViewController : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate> {
 
+    IBOutlet UILabel *frequencyLabel;
     IBOutlet UIView *captureView;
     IBOutlet UIImageView *imageView;
     

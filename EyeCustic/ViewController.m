@@ -32,8 +32,9 @@
     NSArray *imageValue = [self.imageAnalyser pixelValueFor:captureImage AtXLocation:160 andYLocation:240];
     
     float alphaValue = [imageValue[3] floatValue];
-    
-    [self.toneGenerator play:alphaValue*1000];
+    float frequency = alphaValue * 1000;
+    [self.toneGenerator play:frequency];
+    frequencyLabel.text = [NSString stringWithFormat:@"%f", frequency];
 }
 
 - (void)captureImage {

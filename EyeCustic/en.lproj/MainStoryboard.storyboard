@@ -36,11 +36,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="102" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dKF-mE-o33">
+                                <rect key="frame" x="20" y="5" width="280" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.92902938180000005" green="0.92902938180000005" blue="0.92902938180000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="captureView" destination="wPj-JQ-PND" id="J1y-tw-q8j"/>
+                        <outlet property="frequencyLabel" destination="dKF-mE-o33" id="JQI-EM-Xjz"/>
                         <outlet property="imageView" destination="KYM-Gy-aMz" id="J40-2f-Xzw"/>
                     </connections>
                 </viewController>
@@ -55,6 +63,7 @@
             <relationships>
                 <relationship kind="action" name="scan:"/>
                 <relationship kind="outlet" name="captureView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="frequencyLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
             </relationships>
         </class>
