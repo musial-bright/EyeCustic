@@ -18,6 +18,10 @@
 		9AE8D7C3178812BD00264E79 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AE8D7C2178812BD00264E79 /* Default-568h@2x.png */; };
 		9AE8D7C6178812BD00264E79 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE8D7C4178812BD00264E79 /* MainStoryboard.storyboard */; };
 		9AE8D7C9178812BD00264E79 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D7C8178812BD00264E79 /* ViewController.m */; };
+		9AE8D7D0178816E600264E79 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8D7CF178816E600264E79 /* CoreMedia.framework */; };
+		9AE8D7D2178819CB00264E79 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8D7D1178819CB00264E79 /* AVFoundation.framework */; };
+		9AE8D7D517881BC700264E79 /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8D7D417881BC700264E79 /* CaptureSessionManager.m */; };
+		9AE8D7D7178842F500264E79 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE8D7D6178842F500264E79 /* CoreVideo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,11 @@
 		9AE8D7C5178812BD00264E79 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9AE8D7C7178812BD00264E79 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9AE8D7C8178812BD00264E79 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9AE8D7CF178816E600264E79 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		9AE8D7D1178819CB00264E79 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9AE8D7D317881BC700264E79 /* CaptureSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureSessionManager.h; sourceTree = "<group>"; };
+		9AE8D7D417881BC700264E79 /* CaptureSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureSessionManager.m; sourceTree = "<group>"; };
+		9AE8D7D6178842F500264E79 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE8D7D7178842F500264E79 /* CoreVideo.framework in Frameworks */,
+				9AE8D7D2178819CB00264E79 /* AVFoundation.framework in Frameworks */,
+				9AE8D7D0178816E600264E79 /* CoreMedia.framework in Frameworks */,
 				9AE8D7AD178812BD00264E79 /* UIKit.framework in Frameworks */,
 				9AE8D7AF178812BD00264E79 /* Foundation.framework in Frameworks */,
 				9AE8D7B1178812BD00264E79 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +68,9 @@
 		9AE8D7A0178812BD00264E79 = {
 			isa = PBXGroup;
 			children = (
+				9AE8D7D6178842F500264E79 /* CoreVideo.framework */,
+				9AE8D7D1178819CB00264E79 /* AVFoundation.framework */,
+				9AE8D7CF178816E600264E79 /* CoreMedia.framework */,
 				9AE8D7B2178812BD00264E79 /* EyeCustic */,
 				9AE8D7AB178812BD00264E79 /* Frameworks */,
 				9AE8D7AA178812BD00264E79 /* Products */,
@@ -89,6 +104,8 @@
 				9AE8D7C7178812BD00264E79 /* ViewController.h */,
 				9AE8D7C8178812BD00264E79 /* ViewController.m */,
 				9AE8D7B3178812BD00264E79 /* Supporting Files */,
+				9AE8D7D317881BC700264E79 /* CaptureSessionManager.h */,
+				9AE8D7D417881BC700264E79 /* CaptureSessionManager.m */,
 			);
 			path = EyeCustic;
 			sourceTree = "<group>";
@@ -176,6 +193,7 @@
 				9AE8D7B9178812BD00264E79 /* main.m in Sources */,
 				9AE8D7BD178812BD00264E79 /* AppDelegate.m in Sources */,
 				9AE8D7C9178812BD00264E79 /* ViewController.m in Sources */,
+				9AE8D7D517881BC700264E79 /* CaptureSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
